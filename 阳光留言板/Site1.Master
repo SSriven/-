@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="阳光留言板.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/master.css" rel="stylesheet"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="master">
+            <div id="header">
+                <header>
+                    阳光留言板
+                </header>
+            </div>
+            <div id="middle">
+                <div id="left_content">
+                    <asp:ContentPlaceHolder ID="Content" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="right_nav">
+                    <div class="h1">
+                        <span>阳光留言板</span>
+                    </div>
+                    <div class="container">
+                        <ol class="nav nav-pills nav-stacked">
+                            <li>
+                                <a href="">查看主题</a>
+                            </li>
+                            <li>
+                                <a href="">发表留言</a>
+                            </li>
+                            <li>
+                                <a href="">用户注册</a>
+                            </li>
+                            <li>
+                                <a href="">我的留言</a>
+                            </li>
+                            <li>
+                                <a href="">留言管理</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>技术服务热线：15070136342</p>
+                <p>本页面由南昌航空大学软件学院施瑞文著作</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>

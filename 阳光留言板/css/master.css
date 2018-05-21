@@ -1,0 +1,78 @@
+﻿body {
+    background: gainsboro;
+}
+
+#master {
+    margin: 0 auto;
+    width: 1200px;
+    border: solid 4px gray;
+    border-top: none;
+    background: white;
+}
+
+#header {
+    background: url("../images/back1.jpg");
+    height: 250px;
+    border-bottom: solid brown;
+}
+
+header {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 80px;
+    font-family: 华文琥珀;
+}
+
+#middle {
+    min-height: 500px;
+}
+
+#left_content {
+    float: left;
+    width: 75%;
+    min-height: 500px;
+    border-right: solid thin gainsboro;
+}
+
+#right_nav {
+    width: 25%;
+    float: left;
+    min-height: 500px;
+}
+
+.h1 {
+    width: 90%;
+    text-align: center;
+    border-bottom: solid gainsboro 4px;
+    padding-bottom: 10px;
+}
+
+    .h1 span {
+        font-family: 微软雅黑;
+    }
+
+.container {
+    width: 100%;
+}
+
+    .container ol li {
+        border-bottom: dashed thin gray;
+    }
+
+        .container ol li a {
+            color: brown;
+        }
+
+footer {
+    clear: both;
+    background: gainsboro;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+    footer p {
+        margin-bottom: 0;
+        margin-top: 10px;
+        font-size: 12px;
+    }
