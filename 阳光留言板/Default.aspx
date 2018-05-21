@@ -15,6 +15,7 @@
         opacity: 0.9;
 }
 
+
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">
