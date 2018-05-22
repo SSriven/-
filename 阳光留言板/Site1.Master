@@ -13,11 +13,23 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="master">
+        <header>
             <div id="header">
-                <header>
-                    阳光留言板
-                </header>
+                <span id="header_left">
+                    <span>欢迎来到阳光留言板</span>
+                    <asp:Label ID="UserName" class="control-label" runat="server" Text="Label"></asp:Label>
+                </span>
+                <span id="header_right">
+                     <asp:Label ID="DateTime" class="control-label" runat="server" Text="Label"></asp:Label>
+                     <a class="btn btn-danger btn-xs" href="Default.aspx">注销</a>
+                </span>
+            </div>
+         </header>
+        <div id="master">
+            <div class="jumbotron">
+                <div class="container">
+                    <div id="sun">阳光留言板</div>
+                </div>
             </div>
             <div id="middle">
                 <div id="left_content">
@@ -37,7 +49,7 @@
                                 <a href="">发表留言</a>
                             </li>
                             <li>
-                                <a href="">用户注册</a>
+                                <a href="logon.aspx">用户注册</a>
                             </li>
                             <li>
                                 <a href="">我的留言</a>
