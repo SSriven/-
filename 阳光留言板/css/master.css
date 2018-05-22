@@ -25,6 +25,14 @@ header {
     float: right;
 }
 
+header #header_left span {
+    padding-right: 20px;
+}
+
+header #header_right a, span {
+    margin-left: 20px;
+}
+
 #master {
     margin: 0 auto;
     width: 1200px;

@@ -7,9 +7,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/master.css" rel="stylesheet"/>
+    <link href="css/master.css" rel="stylesheet" />
+  <style>
+     
+
+  </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+   
 </head>
 <body>
     <form id="form1" runat="server">
@@ -20,7 +25,7 @@
                     <asp:Label ID="UserName" class="control-label" runat="server" Text="Label"></asp:Label>
                 </span>
                 <span id="header_right">
-                     <asp:Label ID="DateTime" class="control-label" runat="server" Text="Label"></asp:Label>
+                     <asp:Label ID="labDateTime" class="control-label" runat="server" Text="2018/5/22 9:23"></asp:Label>
                      <a class="btn btn-danger btn-xs" href="Default.aspx">注销</a>
                 </span>
             </div>

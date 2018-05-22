@@ -11,7 +11,7 @@ namespace 阳光留言板
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            labDateTime.Text = DateTime.Now.ToLongDateString().ToString();
         }
     }
 }
