@@ -5,31 +5,18 @@
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>阳光留言板</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/master.css" rel="stylesheet" />
-  <style>
-     
-
-  </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-   
 </head>
 <body>
+    
     <form id="form1" runat="server">
-        <header>
-            <div id="header">
-                <span id="header_left">
-                    <span>欢迎来到阳光留言板</span>
-                    <asp:Label ID="UserName" class="control-label" runat="server" Text="Label"></asp:Label>
-                </span>
-                <span id="header_right">
-                     <asp:Label ID="labDateTime" class="control-label" runat="server" Text="2018/5/22 9:23"></asp:Label>
-                     <a class="btn btn-danger btn-xs" href="Default.aspx">注销</a>
-                </span>
-            </div>
-         </header>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:ContentPlaceHolder ID="h" runat="server">
+        </asp:ContentPlaceHolder>
         <div id="master">
             <div class="jumbotron">
                 <div class="container">
@@ -48,10 +35,10 @@
                     <div class="container">
                         <ol class="nav nav-pills nav-stacked">
                             <li>
-                                <a href="">查看主题</a>
+                                <a href="ShowSubject.aspx">查看主题</a>
                             </li>
                             <li>
-                                <a href="">发表留言</a>
+                                <a href="publishWords.aspx">发表留言</a>
                             </li>
                             <li>
                                 <a href="logon.aspx">用户注册</a>

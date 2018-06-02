@@ -18,7 +18,11 @@
 
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="h" runat="server">
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="Content" runat="server">
+    
     <div id="login">
         <div id="login_main">
             <div id="main">
@@ -34,7 +38,14 @@
                         <asp:TextBox ID="txtPassword" class="form-control" placeholder="密码" runat="server" TextMode="Password"></asp:TextBox>
                     </div>
                     <br />
-                    <asp:Button ID="Login" style="width:416px;" class="btn btn-success" runat="server" Text="登录" />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <asp:TextBox ID="txtCode" style="float: left;margin-right: 40px;" class="form-control" runat="server" Width="150px" placeholder="验证码"></asp:TextBox>
+                            <asp:ImageButton ID="imgCode" runat="server" alt="看不清，请点击我！" Width="100" Height="40" src="CheckCode.aspx" />
+                        </div>
+                    </div>
+                        <asp:Label ID="Warning" style="margin-left: 150px;color: red;" runat="server" Text=""></asp:Label>
+                        <asp:Button ID="Login" style="width:416px;" class="btn btn-success" runat="server" Text="登录" OnClick="Login_Click" />
                     <br />
                     <br />
                 </div>

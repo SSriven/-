@@ -48,6 +48,12 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\demo1\demo1\bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MysqlDataHelper">
+      <HintPath>..\..\demo1\demo1\bin\MysqlDataHelper.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,8 +72,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CheckCode.aspx" />
+    <Content Include="css\discuss.css" />
+    <Content Include="css\showsubject.css" />
+    <Content Include="css\ShowWords.css" />
+    <Content Include="discuss.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="publishWords.aspx" />
     <None Include="packages.config" />
     <Content Include="logon.aspx" />
+    <Content Include="ShowSubject.aspx" />
+    <Content Include="ShowWords.aspx" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -82,12 +97,29 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckCode.aspx.cs">
+      <DependentUpon>CheckCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckCode.aspx.designer.cs">
+      <DependentUpon>CheckCode.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="discuss.aspx.cs">
+      <DependentUpon>discuss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="discuss.aspx.designer.cs">
+      <DependentUpon>discuss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="logon.aspx.cs">
       <DependentUpon>logon.aspx</DependentUpon>
@@ -96,7 +128,23 @@
     <Compile Include="logon.aspx.designer.cs">
       <DependentUpon>logon.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MD5Class.cs" />
+    <Compile Include="MySqlData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowSubject.aspx.cs">
+      <DependentUpon>ShowSubject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowSubject.aspx.designer.cs">
+      <DependentUpon>ShowSubject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowWords.aspx.cs">
+      <DependentUpon>ShowWords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowWords.aspx.designer.cs">
+      <DependentUpon>ShowWords.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -104,9 +152,19 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="publishWords.aspx.cs">
+      <DependentUpon>publishWords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publishWords.aspx.designer.cs">
+      <DependentUpon>publishWords.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

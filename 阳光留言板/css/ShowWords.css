@@ -1,0 +1,67 @@
+﻿#Words {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#leaveWords {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.showwords {
+    width: 80%;
+    margin: 0 auto;
+    border-spacing: 2;
+}
+
+th, td {
+    padding: 4px 0;
+}
+
+.title {
+    width: 100px;
+}
+
+.content {
+    color: gray;
+}
+
+.leavewords {
+    width: 70%;
+    margin-left: 20%;
+}
+
+.wordscontent {
+    margin: 0;
+    font-size: 16px;
+}
+
+#reply {
+    width: 90%;
+    margin: 2% auto;
+}
+
+#input {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#sent {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#btn {
+    width: 50%;
+    float: left;
+}
+
+#watch {
+    width: 50%;
+    float: left;
+    text-align: right;
+}
+
+    #watch span {
+        margin: 0;
+    }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MySql.Data.MySqlClient;
 
 namespace 阳光留言板
 {
@@ -11,7 +12,7 @@ namespace 阳光留言板
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            labDateTime.Text = DateTime.Now.ToLongDateString().ToString();
+
         }
     }
 }

@@ -1,0 +1,28 @@
+﻿#discuss_content {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 400px;
+}
+
+#time {
+    font-size: 13px;
+    color: grey;
+    font-weight: lighter;
+}
+
+.Ta {
+    font-size: 13px;
+    color: black;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+#content {
+    color: #444;
+}
+
+#border {
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: solid thin #eee;
+}
