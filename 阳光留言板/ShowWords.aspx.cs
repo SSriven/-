@@ -10,13 +10,14 @@ namespace 阳光留言板
 {
     public partial class ShowWords : System.Web.UI.Page
     {
-        public string ShowSubject, ShowTime, ShowContent, ShowName;
+        public string ShowSubject, ShowTime, ShowContent, ShowName, num;
         string id;
         public int x;
+        int n = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            int n = 0;
+            n = 0;
             if (Session["userName"] == null || Session["userName"].ToString() == "")
             {
                 Session.Abandon();
@@ -77,6 +78,7 @@ namespace 阳光留言板
                 }
             }
             lblNumber.Text = n.ToString();
+            num = n.ToString();
             dr2.Close();
             Con2.Close();
 

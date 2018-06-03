@@ -55,7 +55,7 @@
                    <asp:Button ID="btnok" class="btn btn-danger" runat="server" Text="回复" OnClick="btnok_Click" />
                </div>
                <div id="watch">
-                   <a href="discuss.aspx?ID=<%=x %>">神评论（<asp:Label ID="lblNumber" runat="server" Text="0"></asp:Label>)</a>
+                   <a href="discuss.aspx?ID=<%=x %>&num=<%=num %>">神评论（<asp:Label ID="lblNumber" runat="server" Text="0"></asp:Label>)</a>
                </div>
             </div>
         </div>
