@@ -11,7 +11,7 @@ namespace 阳光留言板
     public partial class ShowWords : System.Web.UI.Page
     {
         public string ShowSubject, ShowTime, ShowContent, ShowName, num;
-        string id;
+        string id="";
         public int x;
         int n = 0;
 
@@ -22,9 +22,8 @@ namespace 阳光留言板
             {
                 Session.Abandon();
                 Response.Redirect("Default.aspx");
-               // Response.Write("<script>window.location.href='Default.aspx'</script>");
             }
-            id =Request["ID"].ToString();
+            id =Request["subjectID"];
             x = Convert.ToInt32(id);
             if (!IsPostBack)
             {
@@ -32,8 +31,8 @@ namespace 阳光留言板
                
                 try
                 {
-                    UserName.Text = Session["userName"].ToString();
-                    string cmdtxt = "select *from tb_leaveword where ID='" + Request["ID"].ToString() + "'";
+                    this.nav.str_userName = Session["userName"].ToString();
+                    string cmdtxt = "select *from tb_leaveword where ID='" + Request["subjectID"].ToString() + "'";
                     
                     MySqlCommand Com = new MySqlCommand(cmdtxt, Con);
                    
@@ -54,12 +53,12 @@ namespace 阳光留言板
                 }
                 catch 
                 {
-                    UserName.Text = "";
+                    this.nav.str_userName = "";
                     Response.Redirect("Default.aspx");
                 }
                 finally
                 {
-                    labDateTime.Text = DateTime.Now.ToLongDateString().ToString();
+                    this.nav.str_dataTime = DateTime.Now.ToLongDateString().ToString();
                     
                     Con.Close();
                 }
@@ -72,7 +71,7 @@ namespace 阳光留言板
             MySqlDataReader dr2 = Com2.ExecuteReader();
             while (dr2.Read())
             {
-                if (dr2["ReplyID"].ToString() == Request["ID"].ToString())
+                if (dr2["ReplyID"].ToString() == Request["subjectID"].ToString())
                 {
                     n++;
                 }
@@ -93,10 +92,10 @@ namespace 阳光留言板
         {
             MySqlData da = new MySqlData();
             string cmdtxt = "insert into tb_reply(Uname,Content,ReplyTime,ReplyID)";
-            cmdtxt += "values('" + Session["userName"].ToString() + "','" + txtReply.Text + "','" + DateTime.Now + "','" + Request["ID"].ToString() + "')";
+            cmdtxt += "values('" + Session["userName"].ToString() + "','" + txtReply.Text + "','" + DateTime.Now + "','" + Request["subjectID"].ToString() + "')";
             if (da.ExceSQL(cmdtxt))
             {
-                Response.Write("<script>alert('回复成功');location='ShowWords.aspx?ID="+Request["ID"]+"'</script>");
+                Response.Write("<script>alert('回复成功');location='ShowWords.aspx?subjectID="+Request["subjectID"]+"'</script>");
                 txtReply.Text = "";
             }
             else
@@ -108,11 +107,6 @@ namespace 阳光留言板
         private void BindDataList()
         {
 
-        }
-        protected void exit_Click(object sender, EventArgs e)
-        {
-            Session.Abandon();
-            Response.Write("<script>window.location.href='Default.aspx'</script>");
         }
     }
 }

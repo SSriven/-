@@ -44,7 +44,7 @@
                                 <a href="logon.aspx">用户注册</a>
                             </li>
                             <li>
-                                <a href="">我的留言</a>
+                                <a href="Leave.aspx?Name=<%=name %>">我的留言</a>
                             </li>
                             <li>
                                 <a href="">留言管理</a>

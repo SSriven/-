@@ -45,7 +45,11 @@
                         </div>
                     </div>
                         <asp:Label ID="Warning" style="margin-left: 150px;color: red;" runat="server" Text=""></asp:Label>
-                        <asp:Button ID="Login" style="width:416px;" class="btn btn-success" runat="server" Text="登录" OnClick="Login_Click" />
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <asp:Button ID="Login" style="width:416px;" class="btn btn-success" runat="server" Text="登录" OnClick="Login_Click" />
+                            </div>
+                        </div>
                     <br />
                     <br />
                 </div>

@@ -22,15 +22,15 @@ namespace 阳光留言板
             {
                 try
                 {
-                    UserName.Text = Session["userName"].ToString();
+                    this.nav.str_userName = Session["userName"].ToString();
                 }
                 catch
                 {
-                    UserName.Text = "";
+                    this.nav.str_userName = "";
                 }
                 finally
                 {
-                    labDateTime.Text = DateTime.Now.ToLongDateString().ToString();
+                    this.nav.str_dataTime = DateTime.Now.ToLongDateString().ToString();
                 }
 
             }
@@ -46,7 +46,7 @@ namespace 阳光留言板
             {
                 if(isName())
                 {
-                    Response.Write("<script>alert('注册失败，该QQ号已被注册！')</script>");
+                    Response.Write("<script>alert('注册失败，该用户名已被注册！')</script>");
                 }
                 else
                 {
@@ -82,7 +82,7 @@ namespace 阳光留言板
         protected bool isName()
         {
             bool bllsName = false;
-            string mysqlSel = "select *from tb_user where QQ='" + txtQQ.Text + "'";
+            string mysqlSel = "select *from tb_user where Uid='" + txtUserName.Text + "'";
             MySqlData da = new MySqlData();
             if (da.ExceSelectSQL(mysqlSel))
             {

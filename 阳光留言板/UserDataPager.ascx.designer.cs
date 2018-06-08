@@ -10,105 +10,78 @@
 namespace 阳光留言板 {
     
     
-    public partial class logon {
+    public partial class UserDataPager {
         
         /// <summary>
-        /// nav 控件。
+        /// labPageCount 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::阳光留言板.nav nav;
+        protected global::System.Web.UI.WebControls.Label labPageCount;
         
         /// <summary>
-        /// txtUserName 控件。
+        /// labCurrentPage 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUserName;
+        protected global::System.Web.UI.WebControls.Label labCurrentPage;
         
         /// <summary>
-        /// RequiredFieldValidator1 控件。
+        /// lnkbtnFirst 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.Button lnkbtnFirst;
         
         /// <summary>
-        /// txtPassword 控件。
+        /// lnkbtnFront 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::System.Web.UI.WebControls.Button lnkbtnFront;
         
         /// <summary>
-        /// txtQpassword 控件。
+        /// lnkbtnNext 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtQpassword;
+        protected global::System.Web.UI.WebControls.Button lnkbtnNext;
         
         /// <summary>
-        /// CompareValidator1 控件。
+        /// lnkbtnLast 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+        protected global::System.Web.UI.WebControls.Button lnkbtnLast;
         
         /// <summary>
-        /// txtQQ 控件。
+        /// txtPage 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtQQ;
+        protected global::System.Web.UI.WebControls.TextBox txtPage;
         
         /// <summary>
-        /// RequiredFieldValidator2 控件。
+        /// lnkbtnSearch 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
-        
-        /// <summary>
-        /// male 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton male;
-        
-        /// <summary>
-        /// famale 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton famale;
-        
-        /// <summary>
-        /// Logon 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Logon;
+        protected global::System.Web.UI.WebControls.LinkButton lnkbtnSearch;
     }
 }

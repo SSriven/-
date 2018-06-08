@@ -27,6 +27,7 @@ namespace 阳光留言板
                 string pass = md5.Md5Encrypt(txtPassword.Text);
                 string mysqlSel = "select *from tb_user where Uid=@username and PassWord=@userpass";
                 MySqlCommand com = new MySqlCommand(mysqlSel, con);
+                com.CommandType = System.Data.CommandType.Text;      
                 com.Parameters.Add(new MySqlParameter("username", MySqlDbType.VarChar, 20));
                 com.Parameters["username"].Value = txtUserName.Text;
                 com.Parameters.Add(new MySqlParameter("userpass", MySqlDbType.VarChar, 100));
@@ -34,9 +35,12 @@ namespace 阳光留言板
                 
                 if (Convert.ToInt32(com.ExecuteScalar()) > 0)
                 {
+                    MySqlDataReader myDr = com.ExecuteReader();
+                    myDr.Read();
                     Session["userName"] = txtUserName.Text;
-                    Response.Redirect("ShowSubject.aspx");
+                    Response.Redirect("ShowSubject.aspx?userID='"+myDr["ID"]+"'");
                     txtCode.Text = "";
+                    myDr.Close();
                 }
                 else
                 {

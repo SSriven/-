@@ -74,10 +74,13 @@
   <ItemGroup>
     <Content Include="CheckCode.aspx" />
     <Content Include="css\discuss.css" />
+    <Content Include="css\myleave.css" />
     <Content Include="css\showsubject.css" />
     <Content Include="css\ShowWords.css" />
     <Content Include="discuss.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="nav.ascx" />
+    <Content Include="Leave.aspx" />
     <Content Include="publishWords.aspx" />
     <None Include="packages.config" />
     <Content Include="logon.aspx" />
@@ -94,6 +97,7 @@
   <ItemGroup>
     <Content Include="css\master.css" />
     <Content Include="Default.aspx" />
+    <Content Include="UserDataPager.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +125,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="nav.ascx.cs">
+      <DependentUpon>nav.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nav.ascx.designer.cs">
+      <DependentUpon>nav.ascx</DependentUpon>
+    </Compile>
     <Compile Include="logon.aspx.cs">
       <DependentUpon>logon.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,6 +140,13 @@
       <DependentUpon>logon.aspx</DependentUpon>
     </Compile>
     <Compile Include="MD5Class.cs" />
+    <Compile Include="Leave.aspx.cs">
+      <DependentUpon>Leave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Leave.aspx.designer.cs">
+      <DependentUpon>Leave.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MySqlData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShowSubject.aspx.cs">
@@ -158,6 +176,13 @@
     </Compile>
     <Compile Include="publishWords.aspx.designer.cs">
       <DependentUpon>publishWords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDataPager.ascx.cs">
+      <DependentUpon>UserDataPager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDataPager.ascx.designer.cs">
+      <DependentUpon>UserDataPager.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

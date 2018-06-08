@@ -1,4 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="publishWords.aspx.cs" Inherits="阳光留言板.WebForm1" %>
+
+<%@ Register Src="~/nav.ascx" TagPrefix="uc1" TagName="nav" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         #publish {
@@ -25,18 +28,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="h" runat="server">
-    <header>
-            <div id="header">
-                <span id="header_left">
-                    <span>欢迎来到阳光留言板</span>
-                    <asp:Label ID="UserName" class="control-label username" runat="server" Text="Label"></asp:Label>
-                </span>
-                <span id="header_right">
-                     <asp:Label ID="labDateTime" class="control-label" runat="server" Text="2018/5/22 9:23"></asp:Label>
-                     <asp:Button ID="exit" class="btn btn-danger btn-xs" runat="server" Text="注销" OnClick="exit_Click"></asp:Button>
-                </span>
-            </div>
-         </header>
+    <uc1:nav runat="server" ID="nav" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Content" runat="server">
     <div id="publish">

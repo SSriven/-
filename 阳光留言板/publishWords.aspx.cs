@@ -21,15 +21,15 @@ namespace 阳光留言板
             {
                 try
                 {
-                    UserName.Text = Session["userName"].ToString();
+                    this.nav.str_userName = Session["userName"].ToString();
                 }
                 catch
                 {
-                    UserName.Text = "";
+                    this.nav.str_userName = "";
                 }
                 finally
                 {
-                    labDateTime.Text = DateTime.Now.ToLongDateString().ToString();
+                    this.nav.str_dataTime = DateTime.Now.ToLongDateString().ToString();
                 }
                 
             }
@@ -51,11 +51,6 @@ namespace 阳光留言板
             }
         }
 
-        protected void exit_Click(object sender, EventArgs e)
-        {
-            Session.Abandon();
-            Response.Write("<script>window.location.href='Default.aspx'</script>");
-        }
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {

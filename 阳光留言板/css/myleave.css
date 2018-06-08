@@ -1,0 +1,75 @@
+﻿.first {
+    width: 90%;
+    margin: 0 auto;
+    border-top: solid 15px #eee;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+    .first span {
+        margin: 0;
+    }
+
+.second {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.my_tltie {
+    color: black;
+    font-size: 20px;
+}
+
+.time {
+    color: gray;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.reply_people {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.my_content {
+    padding-bottom: 20px;
+    border-bottom: solid thin gainsboro;
+    font-size: 18px;
+}
+
+#reply {
+    width: 100%;
+}
+
+#input {
+    width: 100%;
+}
+
+#sent {
+    width: 100%;
+}
+
+#btn {
+    width: 100%;
+    float: none;
+    text-align: right;
+}
+
+.reply_content {
+    color: black;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.second li {
+    padding-bottom: 5px;
+}
+
+    .second li:first-child {
+        padding-top: 10px;
+    }
+
+    .second li:last-child {
+        padding-bottom: 10px;
+    }

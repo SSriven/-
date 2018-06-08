@@ -1,21 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ShowWords.aspx.cs" Inherits="阳光留言板.ShowWords" %>
+
+<%@ Register Src="~/nav.ascx" TagPrefix="uc1" TagName="nav" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="css/subject.css" rel="stylesheet" />
+    <link href="css/showsubject.css" rel="stylesheet" />
     <link href="css/ShowWords.css" rel="stylesheet" />
+    <style>
+        pre{
+            white-space:pre-wrap;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="h" runat="server">
-    <header>
-            <div id="header">
-                <span id="header_left">
-                    <span>欢迎来到阳光留言板</span>
-                    <asp:Label ID="UserName" class="control-label" runat="server" Text="Label"></asp:Label>
-                </span>
-                <span id="header_right">
-                     <asp:Label ID="labDateTime" class="control-label" runat="server" Text="2018/5/22 9:23"></asp:Label>
-                     <asp:Button ID="exit" class="btn btn-danger btn-xs" runat="server" Text="注销" OnClick="exit_Click"></asp:Button>
-                </span>
-            </div>
-         </header>
+    <uc1:nav runat="server" ID="nav" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Content" runat="server">
     <div id="Words">
@@ -43,7 +40,7 @@
                 </tr>
             </table>
             <div class="leavewords">
-                <span class="wordscontent"><%=ShowContent %></span>
+                <span class="wordscontent"><pre><%=ShowContent %></pre></span>
             </div>
         </div>
         <div id="reply">
@@ -55,7 +52,7 @@
                    <asp:Button ID="btnok" class="btn btn-danger" runat="server" Text="回复" OnClick="btnok_Click" />
                </div>
                <div id="watch">
-                   <a href="discuss.aspx?ID=<%=x %>&num=<%=num %>">神评论（<asp:Label ID="lblNumber" runat="server" Text="0"></asp:Label>)</a>
+                   <a href="discuss.aspx?subjectID=<%=x %>&Reply_num=<%=num %>">神评论（<asp:Label ID="lblNumber" runat="server" Text="0"></asp:Label>)</a>
                </div>
             </div>
         </div>

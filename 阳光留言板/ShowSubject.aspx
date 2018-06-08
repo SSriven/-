@@ -1,4 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ShowSubject.aspx.cs" Inherits="阳光留言板.ShowSubject" %>
+
+<%@ Register Src="~/nav.ascx" TagPrefix="uc1" TagName="nav" %>
+<%@ Register Src="~/UserDataPager.ascx" TagPrefix="uc1" TagName="UserDataPager" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/showsubject.css" rel="stylesheet" />
     <style>
@@ -9,18 +14,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="h" runat="server">
-    <header>
-            <div id="header">
-                <span id="header_left">
-                    <span>欢迎来到阳光留言板</span>
-                    <asp:Label ID="UserName" class="control-label username" runat="server" Text="Label"></asp:Label>
-                </span>
-                <span id="header_right">
-                     <asp:Label ID="labDateTime" class="control-label" runat="server" Text="2018/5/22 9:23"></asp:Label>
-                     <asp:Button ID="exit" class="btn btn-danger btn-xs" runat="server" Text="注销" OnClick="exit_Click"></asp:Button>
-                </span>
-            </div>
-         </header>
+    <uc1:nav runat="server" ID="nav" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Content" runat="server">
     <div id="subject">
@@ -32,13 +26,13 @@
             <div id="list">
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server" ChildrenAsTriggers="True" UpdateMode="Conditional">
                     <ContentTemplate>
-                        <asp:DataList ID="DataList1" runat="server" OnItemCommand="DataList1_ItemCommand" OnItemDataBound="DataList1_ItemDataBound" >
+                        <asp:DataList ID="DataList1" runat="server"  >
                             <ItemTemplate>
                                 <li class=Sub>
-                                    <span><%#Eval("Uid") %></span>
+                                    <a href="Leave.aspx?Name=<%#Eval("Uid")%>"><span><%#Eval("Uid") %></span></a>
                                     <ul class=list-unstyled>
                                         <li>
-                                            <a href="ShowWords.aspx?ID=<%#Eval("ID")%>">
+                                            <a href="ShowWords.aspx?subjectID=<%#Eval("ID")%>">
                                                 <%#Eval("Subject")%>
                                             </a>
                                         </li>
@@ -49,7 +43,8 @@
                                 </li>
                             </ItemTemplate>
                             <FooterTemplate >
-                                <br />
+                                <!--<br />
+                                
                                 <div id="footer">
                                     <asp:Label ID="labPageCount" runat="server" style="font-weight:bold;" Text="Label"></asp:Label>/
                                     <asp:Label ID="labCurrentPage" runat="server" Text="Label"></asp:Label>
@@ -61,14 +56,17 @@
                                     <asp:TextBox ID="txtPage" class="form-control" runat="server" style="width:40px;display:inline;"></asp:TextBox>
                                     <asp:LinkButton ID="lnkbtnSearch" class="btn btn-success" runat="server" CommandName="search">Go</asp:LinkButton>
                                 </div>
-                                <div style="clear:both">&nbsp;</div>
+                                <div style="clear:both">&nbsp;</div>-->
                             </FooterTemplate>
                         </asp:DataList>
+                        <br />
+                        <uc1:UserDataPager runat="server" id="UserDataPager" />
+                        <div style="clear:both">&nbsp;</div>
                     </ContentTemplate>
                 </asp:UpdatePanel>
                 <!--<ul class="list-unstyled">
                 </ul>-->
-            </div>
-        </div>
-    </div>
+            </div><!--list-->
+        </div><!--subList-->
+    </div><!--subject-->
 </asp:Content>
