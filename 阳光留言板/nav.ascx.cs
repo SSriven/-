@@ -19,6 +19,11 @@ namespace 阳光留言板
             get { return this.labDateTime.Text; }
             set { this.labDateTime.Text = value; }
         }
+        public string str_txtSearch
+        {
+            get { return txtSearch.Text; }
+            set { this.txtSearch.Text = value; }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -28,6 +33,15 @@ namespace 阳光留言板
         {
             Session.Abandon();
             Response.Write("<script>window.location.href='Default.aspx'</script>");
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtSearch.Text != "")
+            {
+                Session["search"] = "select *from tb_leaveword where Subject like '%" + txtSearch.Text + "%' order by leaveTime desc";
+                Response.Redirect("search.aspx?keyword='" + txtSearch.Text + "'");
+            }
         }
     }
 }

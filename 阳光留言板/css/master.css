@@ -1,12 +1,12 @@
-body {
+﻿body {
     background: gainsboro;
 }
 
 header {
     background: #0b5ea5;
-    height: 30px;
+    height: 40px;
     min-width: 1040px;
-    line-height: 30px;
+    line-height: 40px;
     position: relative;
 }
 
